@@ -8,12 +8,17 @@ export default defineNuxtConfig({
     fallback: 'dark',
   },
   css: ['/assets/css/tailwind.css'],
+  app:{
   head: {
     htmlAttrs: {
       lang: 'ja',
       prefix: 'og: http://ogp.me/ns#'
     },
     title: 'Misskey デコレーションアイコンプレビュー',
+    link: [
+      { rel: "icon", type: "image/png", href: "favicon-16x16.png" },
+      { rel: "apple-touch-icon", href: "favicon-16x16.png" },
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -25,4 +30,5 @@ export default defineNuxtConfig({
       { hid: 'og:description', property: 'og:description', content: 'Misskeyのデコレーションアイコンのプレビューが見られるサイトです' },
     ],
   },
+  }
 })
