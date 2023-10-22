@@ -1,0 +1,116 @@
+<script setup lang="ts">
+import { IconArrowBackUp,IconRepeat,IconPlus,IconDots } from '@tabler/icons-vue';
+import {defineProps} from "vue";
+function isDomain(str:string) {
+    // ドメインを正確にチェックするための正規表現
+    const domainRegex = /^(?:https?:\/\/)?(?:[\w-]+\.)*([\w-]+\.[a-z]{2,}(?:\.[a-z]{2,})?)$/i;
+    return domainRegex.test(str);
+}
+const url = useState('url', () => 'https://prismisskey.space/twemoji/1f974.svg')
+const decoration = useState('decoration')
+const bannerUrl = useState('bannerUrl')
+const name = useState('name')
+const bio = useState('bio')
+const username = useState('username')
+
+const props = defineProps(['userId','file']);
+</script>
+
+<template>
+    <article style="background-color:#282d2d;" class="rounded-2xl h-32 w-auto flex relative mb-4 mx-2">
+        <span class="absolute iconspn">
+            <img class="rounded-full object-cover icon" :src=url alt="">
+            <img class="rounded-full deco" :src=decoration alt="">
+        </span>
+        <div class="flex-1">
+            <header >
+            <p class="name">{{name}}</p>
+                <p class="id">@{{username}}</p>
+            </header>
+            <div style="container-type: inline-size;">
+                ほにゃほにゃほにゃーーー
+            </div>
+            <footer>
+                <IconArrowBackUp />
+                <IconRepeat/>
+                <IconPlus/>
+                <IconDots/>
+            </footer>
+        </div>
+
+    </article>
+</template>
+
+<style scoped>
+    article {
+        padding: 28px 32px;
+    }
+    .icon{
+        position: absolute;
+        inset: 0;
+        border-radius: 100%;
+        z-index: 1;
+        overflow: clip;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .deco{
+        position: absolute;
+        z-index: 1;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        pointer-events: none;
+    }
+    img{
+        max-width: 200% !important;
+    }
+    .iconspn{
+        flex-shrink: 0;
+        display: block!important;
+        margin: 0 14px 0 0;
+        width: 58px;
+        height: 58px;
+        position: sticky!important;
+        top: 22px ;
+        left: 0;
+    }
+    header{
+        display: flex;
+        align-items: baseline;
+        white-space: nowrap;
+    }
+    .name{
+        flex-shrink: 1;
+        display: block;
+        margin: 0 0.5em 0 0;
+        padding: 0;
+        overflow: hidden;
+        font-size: 1em;
+        font-weight: 700;
+        text-decoration: none;
+        text-overflow: ellipsis;
+    }
+    .id{
+        flex-shrink: 9999999;
+        margin: 0 0.5em 0 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    footer{
+        position: relative;
+        display: flex;
+        z-index: 1;
+        padding-left:0 !important;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        padding-right: 8px;
+    }
+    svg{
+        opacity: .7;
+        vertical-align: -12%;
+        line-height: 1em;
+        margin-right: 28px;
+    }
+</style>
