@@ -75,7 +75,7 @@ function toDefault() {
 
         <span class="absolute iconspn">
             <img class="rounded-full object-cover icon" :src=url alt="">
-            <img :style="'transform: rotate('+rotate+'deg);'" class="rounded-full deco" :src=decoration alt="">
+            <img :style="'transform: rotate('+rotate+'deg);'" class="deco" :src=decoration alt="">
         </span>
 
         <div class="name">
