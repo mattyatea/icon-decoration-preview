@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     title: 'Misskey デコレーションアイコンプレビュー',
     link: [
       { rel: "icon", type: "image/png", href: "favicon-16x16.png" },
+      { rel: "icon", type: "image/png", href: "favicon-kusodeka.png" },
       { rel: "apple-touch-icon", href: "favicon-16x16.png" },
     ],
     meta: [
