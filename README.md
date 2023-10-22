@@ -1,75 +1,26 @@
-# Nuxt 3 Minimal Starter
+# Misskey Icon Decoration Preview
+Misskey v2023.11.0で実装予定のアイコンデコレーションのプレビューを見れるやつです。
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Node v20で動作確認済です
 
-## Setup
+# Installation
+適当なところにcloneして
 
-Make sure to install the dependencies:
+`pnpm install`
 
-```bash
-# npm
-npm install
+して
 
-# pnpm
-pnpm install
+`pnpm build`
 
-# yarn
-yarn install
+して
 
-# bun
-bun install
-```
+` node .output/server/index.mjs `
 
-## Development Server
+すれば起動します
 
-Start the development server on `http://localhost:3000`:
+# License
+This project is licensed under the MIT License.
 
-```bash
-# npm
-npm run dev
+https://opensource.org/license/mit/
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+© 2023 mattyatea

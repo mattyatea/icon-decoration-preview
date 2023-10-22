@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { IconArrowBackUp,IconRepeat,IconPlus,IconDots } from '@tabler/icons-vue';
 import {defineProps} from "vue";
+import 'assets/css/icons-webfont/tabler-icons.min.css'
 function isDomain(str:string) {
     // ドメインを正確にチェックするための正規表現
     const domainRegex = /^(?:https?:\/\/)?(?:[\w-]+\.)*([\w-]+\.[a-z]{2,}(?:\.[a-z]{2,})?)$/i;
@@ -31,10 +31,10 @@ const props = defineProps(['userId','file']);
                 ほにゃほにゃほにゃーーー
             </div>
             <footer>
-                <IconArrowBackUp />
-                <IconRepeat/>
-                <IconPlus/>
-                <IconDots/>
+                <i class="ti ti-arrow-back-up"></i>
+                <i class="ti ti-repeat"></i>
+                <i class="ti ti-plus"></i>
+                <i class="ti ti-dots"></i>
             </footer>
         </div>
 
@@ -107,7 +107,7 @@ const props = defineProps(['userId','file']);
         padding-top: 8px;
         padding-right: 8px;
     }
-    svg{
+    i{
         opacity: .7;
         vertical-align: -12%;
         line-height: 1em;
