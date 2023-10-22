@@ -8,16 +8,13 @@ function isDomain(str:string) {
 }
 const url = useState('url', () => 'https://prismisskey.space/twemoji/1f974.svg')
 const decoration = useState('decoration')
-const bannerUrl = useState('bannerUrl')
 const name = useState('name')
-const bio = useState('bio')
 const username = useState('username')
 
-const props = defineProps(['userId','file']);
 </script>
 
 <template>
-    <article style="background-color:#282d2d;" class="rounded-2xl h-32 w-auto flex relative mb-4 mx-2">
+    <article style="background-color: var(--bg-color); transition: all 0.5s ease-in-out;" class="rounded-2xl h-32 w-auto flex relative mb-4 mx-2">
         <span class="absolute iconspn">
             <img class="rounded-full object-cover icon" :src=url alt="">
             <img class="rounded-full deco" :src=decoration alt="">

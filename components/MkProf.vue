@@ -70,7 +70,7 @@ function toDefault() {
 </script>
 
 <template>
-    <div style="background-color:#282d2d;" class="rounded-2xl h-auto w-auto lg:w-80 flex flex-col relative mb-4 mx-2">
+    <div style="background-color: var(--bg-color); transition: all 0.5s ease-in-out;" class="rounded-2xl h-auto w-auto md:w-80 flex flex-col relative mb-4 mx-2">
         <div class="w-full bg-center bg-cover rounded-t-2xl" :style="{ height: '84px', backgroundImage: 'url(' + bannerUrl + ')' }" />
 
         <span class="absolute iconspn">
@@ -105,7 +105,8 @@ function toDefault() {
         object-fit: cover;
         width: calc(100% + 3px);
         height: calc(100% + 3px);
-        border: 3px solid #282d2d;
+        border: 3px solid var(--bg-color);
+        transition: all 0.5s ease-in-out;
     }
     .deco{
         position: absolute;
