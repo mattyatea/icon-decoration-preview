@@ -18,7 +18,6 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@tabler/icons-webfont": "^2.39.0",
     "vuex": "^4.1.0"
   }
 }

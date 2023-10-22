@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@tabler/icons-webfont':
-    specifier: ^2.39.0
-    version: 2.39.0
   vuex:
     specifier: ^4.1.0
     version: 4.1.0(vue@3.3.6)
@@ -1647,16 +1644,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@tabler/icons-webfont@2.39.0:
-    resolution: {integrity: sha512-Dm8jLFBCtVA6SRRsJfvSKgY0SzvsGxfuUkbLhQZKY6YtKsySQlpCNkyFRB/pTSKNb2nb3LCxFXSOsUAGNF6vKA==}
-    dependencies:
-      '@tabler/icons': 2.39.0
-    dev: false
-
-  /@tabler/icons@2.39.0:
-    resolution: {integrity: sha512-iK3j2jIEGIUaJcbYYg5iwyG1Y/m4lzUxAUbxRpvgeXCWP29jvZaH5hajZmU3KaSealddHuJg7PSQislPHpCsoQ==}
-    dev: false
 
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
