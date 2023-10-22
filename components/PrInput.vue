@@ -32,8 +32,8 @@ const updateInput = (value: string) => {
 
 <template>
     <div class="file mt-4" v-if="type === 'file'">
-        <label class="mx-9">
-        <input type="file" @change="onFileChange" accept="image/*" /> デコレーションをアップロード
+        <label class="w-full h-11 block">
+        <input type="file" @change="onFileChange" accept="image/*" /><p class="text-center pt-2.5 "> デコレーションをアップロード</p>
         </label>
     </div>
     <input v-else placeholder="@mattyatea@prismisskey.space" class="text" type="text" v-model="inputValue" @input="updateInput($event.target.value)" />
@@ -58,7 +58,7 @@ const updateInput = (value: string) => {
     }
     .file {
         font-size: 16px;
-        padding: 10px;
+
         border: 1px solid #ccc;
         border-radius: 8px;
         background-color: #234;
