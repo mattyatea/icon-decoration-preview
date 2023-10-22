@@ -6,6 +6,8 @@
       </div>
 
     <PrInput @update-input="handleInputImage" />
+      画像の回転
+    <PrInput type="range" @update-input="handleUpdateRotate" />
     <PrInput type="file" @update-image="handleUpdateImage" />
     <ColorModeToggle/>
   </div>
@@ -14,15 +16,19 @@
 <script setup lang="ts">
 const userId = ref();
 const decoImage = ref();
+const rotate = useState('rotate', () => "0")
 const handleUpdateImage = (newImage: any) => {
     decoImage.value = newImage;
+};
+const handleUpdateRotate = (deg: number) => {
+    rotate.value = deg;
 };
 const handleInputImage = (newText: any) => {
     userId.value = newText;
 };
 </script>
 
-<style>
+<style >
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=M+PLUS+Rounded+1c&display=swap');
 html{
     color: var(--text-color);
@@ -30,6 +36,7 @@ html{
     rotate: 0.03deg;
     overflow: hidden;
     transition: background-color 0.5s ease-in-out;
+    --rotate: v-bind(rotate);
 }
 .dark{
     background-color: #012;

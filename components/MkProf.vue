@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
-
+const rotate = useState('rotate')
 const props = defineProps(['userId','file']);
 const url = useState('url', () => 'https://prismisskey.space/twemoji/1f974.svg')
 const decoration = useState('decoration', () => props.file)
@@ -75,7 +75,7 @@ function toDefault() {
 
         <span class="absolute iconspn">
             <img class="rounded-full object-cover icon" :src=url alt="">
-            <img class="rounded-full deco" :src=decoration alt="">
+            <img :style="'transform: rotate('+rotate+'deg);'" class="rounded-full deco" :src=decoration alt="">
         </span>
 
         <div class="name">

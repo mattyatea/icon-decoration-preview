@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineProps} from "vue";
+const rotate = useState('rotate')
 import 'assets/css/icons-webfont/tabler-icons.min.css'
 function isDomain(str:string) {
     // ドメインを正確にチェックするための正規表現
@@ -17,7 +17,7 @@ const username = useState('username')
     <article style="background-color: var(--bg-color); transition: all 0.5s ease-in-out;" class="rounded-2xl h-32 w-auto flex relative mb-4 mx-2">
         <span class="absolute iconspn">
             <img class="rounded-full object-cover icon" :src=url alt="">
-            <img class="rounded-full deco" :src=decoration alt="">
+            <img :style="'transform: rotate('+rotate+'deg);'" class="rounded-full deco" :src=decoration alt="">
         </span>
         <div class="flex-1">
             <header >
@@ -59,6 +59,7 @@ const username = useState('username')
         left: -50%;
         width: 200%;
         pointer-events: none;
+        transform: rotate(var(--rotate));
     }
     img{
         max-width: 200% !important;

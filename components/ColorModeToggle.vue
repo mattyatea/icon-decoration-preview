@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="mt-4" @click="ToggleColorMode()">ライト、ダークを切り替える</button>
+        <button class="mb-4" @click="ToggleColorMode()">ライト、ダークを切り替える</button>
     </div>
 </template>
 <script setup>
